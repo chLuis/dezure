@@ -19,7 +19,7 @@ export default function TextTranscription({ data, audio }: TextTranscriptionProp
   }
 
   return (
-    <div className="flex flex-col gap-5 z-10">
+    <div className="flex flex-col gap-5 z-10 pt-4 px-2">
       {data.map((item, index) => (
         <div
           key={index}
