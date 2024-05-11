@@ -47,7 +47,7 @@ export default function Controller({ audio }: { audio: React.RefObject<HTMLAudio
       <div className="relative w-full">
         <div
           style={{ width: `${currentPorcentage}%` }}
-          className={`absolute z-20 top-0 left-0 h-2 min-h-2 bg-green-400 animate-showSlow duration-200`}
+          className={`absolute z-20 top-0 left-0 h-2 min-h-2 bg-green-500 animate-showSlow duration-200`}
         ></div>
         <div
           style={{ width: "100%" }}
@@ -57,7 +57,7 @@ export default function Controller({ audio }: { audio: React.RefObject<HTMLAudio
           {showPlay ? (
             <div
               onClick={playAudio}
-              className="p-2 cursor-pointer hover:text-indigo-500 duration-200"
+              className="flex flex-col justify-center items-center min-w-14 p-2 cursor-pointer hover:text-green-500 duration-200"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -68,11 +68,12 @@ export default function Controller({ audio }: { audio: React.RefObject<HTMLAudio
               >
                 <path d="m380-300 280-180-280-180v360ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
               </svg>
+              <span className="text-sm text-center">Play</span>
             </div>
           ) : (
             <div
               onClick={pauseAudio}
-              className="p-2 cursor-pointer hover:text-indigo-500 duration-200"
+              className="flex flex-col justify-center items-center min-w-14 p-2 cursor-pointer hover:text-green-500 duration-200"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -83,11 +84,12 @@ export default function Controller({ audio }: { audio: React.RefObject<HTMLAudio
               >
                 <path d="M360-320h80v-320h-80v320Zm160 0h80v-320h-80v320ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
               </svg>
+              <span className="text-sm text-center">Pause</span>
             </div>
           )}
           <div
             onClick={stopAudio}
-            className="p-2 cursor-pointer hover:text-indigo-500 duration-200"
+            className="flex flex-col justify-center items-center min-w-14 p-2 cursor-pointer hover:text-green-500 duration-200"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -98,6 +100,7 @@ export default function Controller({ audio }: { audio: React.RefObject<HTMLAudio
             >
               <path d="M320-320h320v-320H320v320ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
             </svg>
+            <span className="text-sm text-center">Stop</span>
           </div>
         </div>
       </div>

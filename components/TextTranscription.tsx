@@ -43,10 +43,10 @@ export default function TextTranscription({ data, audio }: TextTranscriptionProp
             }`}
           >
             <header className="capitalize">
-              <h4 className="font-bold text-xl pb-1">{item.role}</h4>
+              <h4 className="font-semibold text-xl pb-1">{item.role}</h4>
             </header>
             <p
-              className={`text-sm lg:text-base ${
+              className={`text-sm font-light lg:text-base pb-1 ${
                 audio?.current
                   ? audio.current?.currentTime >= item.start &&
                     audio.current?.currentTime <= item.end
